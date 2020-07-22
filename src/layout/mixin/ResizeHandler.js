@@ -20,8 +20,8 @@ export default {
   mounted() {
     const isMobile = this.$_isMobile()
     if (isMobile) {
-      store.dispatch('app/toggleDevice', 'mobile')
-      store.dispatch('app/closeSideBar', { withoutAnimation: true })
+      store.dispatch('app/toggleDevice', 'mobile').then(r => console.log(r))
+      store.dispatch('app/closeSideBar', { withoutAnimation: true }).then(r => console.log(r))
     }
   },
   methods: {
